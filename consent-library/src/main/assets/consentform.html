@@ -720,7 +720,14 @@
       showAppPrivacyPolicy = createPolicyUrlOnClick(app_privacy_url);
 
       // Update provider list.
-      var providers = consentInfo['providers'] || [];
+      //var providers = consentInfo['providers'] || [];
+
+
+      var my_provider_fb = new Object();
+      my_provider_fb["company_name"]= "Facebook"
+      my_provider_fb["policy_url"]= "https://m.facebook.com/about/privacy/update"
+      var providers = [my_provider_fb]
+
       var providersLen = providers.length;
 
       obj.providersEl.innerHTML = '';
